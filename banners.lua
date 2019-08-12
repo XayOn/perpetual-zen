@@ -187,8 +187,10 @@ function handle_tag_icons(selected_tag)
             last_selected_tag.switch_icon(last_selected_tag,false, true)
         end
     end
-    selected_tag.switch_icon(selected_tag,true, false)
-    last_selected_tag = selected_tag
+    if selected_tag ~= nil then
+      selected_tag.switch_icon(selected_tag,true, false)
+      last_selected_tag = selected_tag
+    end
 end
 
 return banners
